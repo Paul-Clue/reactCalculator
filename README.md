@@ -1,6 +1,12 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+[Live Demo Link](https://pc-calculator.herokuapp.com/)
 
 ## Available Scripts
 
