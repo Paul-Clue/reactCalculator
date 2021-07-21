@@ -1,16 +1,16 @@
-.square{
+.square {
   width: 125px;
   height: 72px;
 }
 
-.Calc{
+.Calc {
   height: 80px;
 }
 
-.board-row{
+.board-row {
   margin-bottom: 0;
 }
 
-.longButton{
+.longButton {
   width: 300px;
 }
