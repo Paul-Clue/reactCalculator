@@ -5,6 +5,7 @@
 
 .Calc {
   height: 80px;
+  text-align: right;
 }
 
 .board-row {
@@ -13,4 +14,9 @@
 
 .longButton {
   width: 300px;
+}
+
+.appDiv {
+  width: 500px;
+  margin: auto;
 }

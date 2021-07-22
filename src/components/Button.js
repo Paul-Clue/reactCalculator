@@ -5,9 +5,9 @@ function Button(props) {
   const { name } = props;
   return (
     <>
-    <button type="button" className="square" >{/* eslint-disable-line*/}
-      {name}
-    </button>
+      <button type="button" className="square">
+        {name}
+      </button>
     </>
   );
 }

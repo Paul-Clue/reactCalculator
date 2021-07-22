@@ -4,8 +4,14 @@ import Button from './Button';
 import '../App.css';
 
 class ButtonPanel extends React.Component {
-  renderSquare(i) {// eslint-disable-line
-    return <Button name={i}/>;// eslint-disable-line
+  constructor() {
+    super();
+    this.renderSquare = this.renderSquare.bind(this);
+  }
+
+  renderSquare(i) {
+    this.i = i;
+    return <Button name={i} />;
   }
 
   render() {
