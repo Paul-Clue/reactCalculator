@@ -1,54 +1,49 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import Button from './Button';
 import '../App.css';
 
-class ButtonPanel extends React.Component {
-  constructor() {
-    super();
-    this.renderSquare = this.renderSquare.bind(this);
+const ButtonPanel = (props) => {
+  const handleClick = (buttonName) => (props.clickHandler(buttonName));
+  function renderSquare(i) {
+    return <Button name={i} clickHandler={handleClick} />;
   }
 
-  renderSquare(i) {
-    this.i = i;
-    return <Button name={i} />;
-  }
-
-  render() {
-    return (
-      <div>
-        <div className="board-row">
-          {this.renderSquare('A/C')}
-          {this.renderSquare('+/-')}
-          {this.renderSquare('%')}
-          {this.renderSquare('/')}
-        </div>
-        <div className="board-row">
-          {this.renderSquare('7')}
-          {this.renderSquare('8')}
-          {this.renderSquare('9')}
-          {this.renderSquare('X')}
-        </div>
-        <div className="board-row">
-          {this.renderSquare('4')}
-          {this.renderSquare('5')}
-          {this.renderSquare('6')}
-          {this.renderSquare('-')}
-        </div>
-        <div className="board-row">
-          {this.renderSquare('1')}
-          {this.renderSquare('2')}
-          {this.renderSquare('3')}
-          {this.renderSquare('+')}
-        </div>
-        <div className="board-row">
-          {this.renderSquare('0')}
-          {this.renderSquare('.')}
-          {this.renderSquare('=')}
-        </div>
+  return (
+    <div>
+      <div className="board-row">
+        {renderSquare('A/C')}
+        {renderSquare('+/-')}
+        {renderSquare('%')}
+        {renderSquare('/')}
       </div>
-    );
-  }
-}
+      <div className="board-row">
+        {renderSquare('7')}
+        {renderSquare('8')}
+        {renderSquare('9')}
+        {renderSquare('X')}
+      </div>
+      <div className="board-row">
+        {renderSquare('4')}
+        {renderSquare('5')}
+        {renderSquare('6')}
+        {renderSquare('-')}
+      </div>
+      <div className="board-row">
+        {renderSquare('1')}
+        {renderSquare('2')}
+        {renderSquare('3')}
+        {renderSquare('+')}
+      </div>
+      <div className="board-row">
+        {renderSquare('0')}
+        {renderSquare('.')}
+        {renderSquare('=')}
+      </div>
+    </div>
+  );
+};
+
+ButtonPanel.propTypes = { clickHandler: PropTypes.func.isRequired };
 
 export default ButtonPanel;

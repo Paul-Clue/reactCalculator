@@ -4,9 +4,14 @@ import PropTypes from 'prop-types';
 function Display(props) {
   const { result } = props;
   return (
-    <form action="">
-      <input type="text" id="lname" name="lname" className="form-control Calc" value={result} disabled />
-    </form>
+
+    <div className="Calc">
+      <h1>{result}</h1>
+    </div>
+
+  // <form action="">
+  //   <input type="text" id="lname" name="lname" className="form-control Calc" value={result} />
+  // </form> }
   );
 }
 
