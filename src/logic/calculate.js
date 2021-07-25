@@ -38,8 +38,25 @@ const calculate = ({ total, next, operation }, buttonName) => {
     case '-':
     case 'x':
     case '/':
+      if (data.next) {
+        result = operate(data.total, data.next, data.operation);
+        data.total = result;
+        data.next = null;
+        data.operation = buttonName;
+        return data;
+      }
+      data.operation = buttonName;
+      return data;
     case '%':
       if (data.next) {
+        result = operate(data.total, data.next, data.operation);
+        data.total = result;
+        data.next = null;
+        data.operation = buttonName;
+        return data;
+      }
+      if (!data.next && data.total) {
+        data.operation = buttonName;
         result = operate(data.total, data.next, data.operation);
         data.total = result;
         data.next = null;

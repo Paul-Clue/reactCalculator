@@ -29,6 +29,9 @@ const operate = (numberOne, numberTwo, operation) => {
       }
       return a.div(b).toString();
     case '%':
+      if (numberTwo === null) {
+        return (a.div(100)).toString();
+      }
       return a.times(b.div(100)).toString();
       // no default
   }
