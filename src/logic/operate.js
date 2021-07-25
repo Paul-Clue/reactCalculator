@@ -21,9 +21,9 @@ const operate = (numberOne, numberTwo, operation) => {
       return a.plus(b).toString();
     case '-':
       return a.minus(b).toString();
-    case '×':
+    case 'x':
       return a.times(b).toString();
-    case '÷':
+    case '/':
       if (b === '0') {
         return 'Error - Division by 0';
       }

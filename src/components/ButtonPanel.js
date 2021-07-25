@@ -21,7 +21,7 @@ const ButtonPanel = (props) => {
         {renderSquare('7')}
         {renderSquare('8')}
         {renderSquare('9')}
-        {renderSquare('X')}
+        {renderSquare('x')}
       </div>
       <div className="board-row">
         {renderSquare('4')}

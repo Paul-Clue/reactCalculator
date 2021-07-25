@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Button(props) {
-  const { name, clickHandler } = props;
-  const handleClick = () => (clickHandler(name));
+  const { name } = props;
+  const handleClick = () => (props.clickHandler(name));
+
+  // const { name, clickHandler } = props;
+  // const handleClick = () => (clickHandler(name));
 
   return (
     <>

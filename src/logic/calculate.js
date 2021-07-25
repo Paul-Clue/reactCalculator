@@ -15,7 +15,7 @@ const calculate = ({ total, next, operation }, buttonName) => {
   }
   let result;
   switch (buttonName) {
-    case 'AC':
+    case 'A/C':
       data.total = null;
       data.next = null;
       data.operation = null;
@@ -34,8 +34,8 @@ const calculate = ({ total, next, operation }, buttonName) => {
       return data;
     case '+':
     case '-':
-    case '×':
-    case '÷':
+    case 'x':
+    case '/':
     case '%':
       if (data.next) {
         result = operate(data.total, data.next, data.operation);
