@@ -1,6 +1,8 @@
 import Big from 'big.js';
 import operate from './operate';
 
+let temp = '';
+
 const calculate = ({ total, next, operation }, buttonName) => {
   const data = {
     total,
@@ -81,8 +83,18 @@ const calculate = ({ total, next, operation }, buttonName) => {
       }
       return data;
     case '=':
+      if (data.total === null && data.operation && data.next) {
+        data.total = temp;
+        result = operate(data.total, data.next, data.operation);
+        temp = result;
+        data.total = result;
+        data.next = null;
+        data.operation = buttonName;
+        return data;
+      }
       if (data.operation && data.next) {
         result = operate(data.total, data.next, data.operation);
+        temp = result;
         data.total = result;
         data.next = null;
         data.operation = buttonName;
