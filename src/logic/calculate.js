@@ -1,6 +1,8 @@
 import Big from 'big.js';
 import operate from './operate';
 
+let temp = '';
+
 const calculate = ({ total, next, operation }, buttonName) => {
   const data = {
     total,
@@ -15,7 +17,7 @@ const calculate = ({ total, next, operation }, buttonName) => {
   }
   let result;
   switch (buttonName) {
-    case 'AC':
+    case 'A/C':
       data.total = null;
       data.next = null;
       data.operation = null;
@@ -34,10 +36,27 @@ const calculate = ({ total, next, operation }, buttonName) => {
       return data;
     case '+':
     case '-':
-    case '×':
-    case '÷':
+    case 'x':
+    case '/':
+      if (data.next) {
+        result = operate(data.total, data.next, data.operation);
+        data.total = result;
+        data.next = null;
+        data.operation = buttonName;
+        return data;
+      }
+      data.operation = buttonName;
+      return data;
     case '%':
       if (data.next) {
+        result = operate(data.total, data.next, data.operation);
+        data.total = result;
+        data.next = null;
+        data.operation = buttonName;
+        return data;
+      }
+      if (!data.next && data.total) {
+        data.operation = buttonName;
         result = operate(data.total, data.next, data.operation);
         data.total = result;
         data.next = null;
@@ -81,8 +100,18 @@ const calculate = ({ total, next, operation }, buttonName) => {
       }
       return data;
     case '=':
+      if (data.total === null && data.operation && data.next) {
+        data.total = temp;
+        result = operate(data.total, data.next, data.operation);
+        temp = result;
+        data.total = result;
+        data.next = null;
+        data.operation = buttonName;
+        return data;
+      }
       if (data.operation && data.next) {
         result = operate(data.total, data.next, data.operation);
+        temp = result;
         data.total = result;
         data.next = null;
         data.operation = buttonName;

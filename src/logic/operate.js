@@ -21,14 +21,17 @@ const operate = (numberOne, numberTwo, operation) => {
       return a.plus(b).toString();
     case '-':
       return a.minus(b).toString();
-    case '×':
+    case 'x':
       return a.times(b).toString();
-    case '÷':
-      if (b === '0') {
+    case '/':
+      if (numberTwo === '0') {
         return 'Error - Division by 0';
       }
       return a.div(b).toString();
     case '%':
+      if (numberTwo === null) {
+        return (a.div(100)).toString();
+      }
       return a.times(b.div(100)).toString();
       // no default
   }
