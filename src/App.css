@@ -1,4 +1,4 @@
-.longButton{
+.longButton {
   width: 50%;
   height: 100px;
   color: black;
@@ -27,7 +27,7 @@
   margin-bottom: 0;
 }
 
-.board-all{
+.board-all {
   width: 700px;
   display: flex;
   flex-direction: column;
@@ -43,7 +43,7 @@
   margin: auto;
 }
 
-.quote{
+.quote {
   position: absolute;
   top: 25vw;
   left: 8vw;
@@ -51,7 +51,7 @@
   font-weight: bolder;
 }
 
-.math{
+.math {
   position: absolute;
   top: 10vw;
   left: -35vw;
