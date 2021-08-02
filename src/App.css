@@ -1,10 +1,25 @@
+.longButton {
+  width: 50%;
+  height: 100px;
+  color: black;
+  border: 1px solid black;
+}
+
 .square {
-  width: 125px;
-  height: 72px;
+  width: 25%;
+  height: 100px;
+  color: black;
+  border: 1px solid black;
 }
 
 .Calc {
-  height: 80px;
+  display: flex;
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  width: 700px;
+  height: 100px;
   text-align: right;
 }
 
@@ -12,11 +27,32 @@
   margin-bottom: 0;
 }
 
-.longButton {
-  width: 300px;
+.board-all {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
 }
 
 .appDiv {
-  width: 500px;
+  position: absolute;
+  top: 8vw;
+  left: 40vw;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
   margin: auto;
+}
+
+.quote {
+  position: absolute;
+  top: 25vw;
+  left: 8vw;
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.math {
+  position: absolute;
+  top: 10vw;
+  left: -35vw;
 }

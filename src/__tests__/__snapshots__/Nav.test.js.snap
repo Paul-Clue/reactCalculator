@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Component It should render 1`] = `
+<div>
+  <nav
+    className="navbar navbar-light bg-info"
+  >
+    <div
+      className="container-fluid"
+    >
+      <span
+        className="navbar-brand mb-0 h1"
+      >
+        <h1>
+          Math Magicians
+        </h1>
+      </span>
+      <div
+        className="AllLinks"
+      >
+        <a
+          className="Link border"
+          href="/"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+        <a
+          className="Link border"
+          href="/calculator"
+          onClick={[Function]}
+        >
+          Calculator
+        </a>
+        <a
+          className="Link"
+          href="/quote"
+          onClick={[Function]}
+        >
+          Quote
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>
+`;
