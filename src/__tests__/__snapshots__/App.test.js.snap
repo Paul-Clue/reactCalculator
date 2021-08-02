@@ -14,9 +14,10 @@ exports[`App Component It should render 1`] = `
       action=""
     >
       <input
-        className="form-control Calc"
+        className="Calc"
         id="lname"
         name="lname"
+        readOnly={true}
         type="text"
         value="0"
       />
