@@ -1,14 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-// import '../App.css';
-// import * as styles from '../App.css';
-
-// const ButtonPanel = (props) => {
-//   const handleClick = (buttonName) => (props.clickHandler(buttonName));
-//   function renderSquare(i) {
-//     return <Button name={i} clickHandler={handleClick} />;
-//   }
 
 const ButtonPanel = (props) => {
   const handleClick = (buttonName) => (props.clickHandler(buttonName));

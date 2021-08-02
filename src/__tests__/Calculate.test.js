@@ -39,6 +39,18 @@ describe('Calculate Function', () => {
     expect(calculate(data, name)).toEqual({ total: '801', next: null, operation: '+' });
   });
 
+  test('It should return the correct percentage when "%" is clicked and next is null', () => {
+    name = '%';
+    data = { total: '123', next: null, operation: '%' };
+    expect(calculate(data, name)).toEqual({ total: '1.23', next: null, operation: '%' });
+  });
+
+  test('It should add a period(.) when "." is clicked and operator is null', () => {
+    name = '.';
+    data = { total: '123', next: '.', operation: null };
+    expect(calculate(data, name)).toEqual({ total: '123.', next: '.', operation: null });
+  });
+
   test('It should concatenate name variable with the total if operation is null and next is null', () => {
     const concat = Math.floor(Math.random() * 10).toString();
     name = concat;
@@ -60,4 +72,3 @@ describe('Calculate Function', () => {
     expect(calculate(data, name)).toEqual({ total: `${concat}`, next: null, operation: null });
   });
 });
-//

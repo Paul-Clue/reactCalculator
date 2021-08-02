@@ -16,7 +16,7 @@ const App = () => {
     setData(result);
   }
 
-  const { next, total, operation } = data;// eslint-disable-line
+  const { next, total } = data;
   const result = !next ? total : next;
   return (
     <div className="appDiv">

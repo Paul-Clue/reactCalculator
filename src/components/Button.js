@@ -13,8 +13,6 @@ function Button(props) {
   const cName = wide ? width[0] : width[1];
   const handleClick = () => (props.clickHandler(name));
 
-  // const { name, clickHandler } = props;
-  // const handleClick = () => (clickHandler(name));
   return (
     <>
       <button type="button" style={style} className={cName} onClick={handleClick}>
